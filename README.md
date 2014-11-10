@@ -12,6 +12,7 @@ A USB Controller for the buckling spring keyboard on the IBM Wheelwriter typewri
 1. First, set up the [Teensy loader.](https://www.pjrc.com/teensy/loader.html) It works on Windows, Mac OS X, and Linux. 
 2. Plug in the Teensy with a Mini-USB cable.
 3. Start the Teensy Loader.
+  * Make sure to run as root, with `sudo`.
 4. Press the button on the Teensy to enter bootloader mode.
 
 ### Install Soarer's Controller
@@ -25,3 +26,4 @@ A USB Controller for the buckling spring keyboard on the IBM Wheelwriter typewri
 
 ### Configure Soarer's Controller
 
+  * Make sure to run as root, with `sudo`.
