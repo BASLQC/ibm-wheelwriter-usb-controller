@@ -36,30 +36,38 @@
 # 13: C7
 # 
 # Sense pins, 8 pin strip (1 = left most pin)
+# 1: F0
+# 2: F1
+# 3: F2
+# 4: F3
+# 5: F4
+# 6: F5
+# 7: F6
+# 8: F7
 
 matrix
    scanrate 1
    debounce 5
    blocking 0
 
-   sense          PF0      PF1      PF2      PF3       PF4      PF5      PF6         PF7
+   sense             PF0          PF1          PF2          PF3          PF4          PF5          PF6           PF7
 
-   strobe   PD0      UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED      LALT
-   strobe   PD1      F10      F7      F1      F3      F4      F5      F11         SPACE
-   strobe   PD2      F9      F8      F2      UNASSIGNED   TAB      F6      LCTRL         CAPS_LOCK
-   strobe   PD3      UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED      LSHIFT
+   strobe   PD0      UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED    LALT
+   strobe   PD1      F10          F7           F1           F3           F4           F5           F11           SPACE
+   strobe   PD2      F9           F8           F2           UNASSIGNED   TAB          F6           LCTRL         CAPS_LOCK
+   strobe   PD3      UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED    LSHIFT
    
-   strobe   PD4      UNASSIGNED   A      BACK_QUOTE   1      Q      UNASSIGNED   Z      8
-   strobe   PC0      UNASSIGNED   S      UNASSIGNED   2      W      UNASSIGNED   X      I
-   strobe   PC1      UNASSIGNED   D      UNASSIGNED   3      E      UNASSIGNED   C      K
-   strobe   PC2      G      F      5      4      R      T      V      B
+   strobe   PD4      UNASSIGNED   A            BACK_QUOTE   1            Q            UNASSIGNED   Z             8
+   strobe   PC0      UNASSIGNED   S            UNASSIGNED   2            W            UNASSIGNED   X             I
+   strobe   PC1      UNASSIGNED   D            UNASSIGNED   3            E            UNASSIGNED   C             K
+   strobe   PC2      G            F            5            4            R            T            V             B
    
-   strobe   PC3      H      J      6      7      U      Y      M      N
-   strobe   PC4      UNASSIGNED   K      EQUAL_SIGN   8      I      RIGHT_BRACE   COMMA      I
-   strobe   PC5      UNASSIGNED   L      3      9      O      5      PERIOD      6
-   strobe   PC6      QUOTE      SEMICOLON   MINUS      0      P      LEFT_BRACE   BACKSLASH   SLASH
+   strobe   PC3      H            J            6            7            U            Y            M             N
+   strobe   PC4      UNASSIGNED   K            EQUAL_SIGN   8            I            RIGHT_BRACE  COMMA         I
+   strobe   PC5      UNASSIGNED   L            3            9            O            5            PERIOD        6
+   strobe   PC6      QUOTE        SEMICOLON    MINUS        0            P            LEFT_BRACE   BACKSLASH     SLASH
    
-   strobe   PC7      UNASSIGNED   FN2      BACKSPACE   PAGE_UP      PAGE_DOWN   6      ENTER      F12
+   strobe   PC7      UNASSIGNED   FN2          BACKSPACE    PAGE_UP      PAGE_DOWN    6            ENTER         F12
 
 end
 

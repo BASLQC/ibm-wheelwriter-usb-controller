@@ -26,4 +26,13 @@ A USB Controller for the buckling spring keyboard on the IBM Wheelwriter typewri
 
 ### Configure Soarer's Controller
 
-  * Make sure to run as root, with `sudo`.
+Make sure to run all commands as root, with `sudo`.
+
+    sudo ./scas wheelwriter-5-teensy2plus-sethstorm.sc wheelwriter-5-teensy2plus-sethstorm.scb
+    sudo ./scwr wheelwriter-5-teensy2plus-sethstorm.scb
+
+## Credits and Sources
+
+* [Deskthority - Soarer's Keyboard Controller](http://deskthority.net/workshop-f7/soarer-s-keyboard-controller-firmware-t6767.html)
+* [Deskthority - PhosphorGlow: Model M Matrix + Teensy](http://deskthority.net/workshop-f7/model-m-matrix-teensy-t8149.html)
+* [Deskthority - Sethstorm: Wheelwriter 5 to Teensy++](http://deskthority.net/workshop-f7/wheelwriter-5-iso-enter-boltmodded-t7397.html)
