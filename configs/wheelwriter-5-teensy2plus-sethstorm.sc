@@ -18,7 +18,7 @@
 # [Modifier]-[`] : Escape key
 #
 
-# Note: This configuration uses the following pinout with a Teensy 3.0, as pictured:
+# Note: This configuration uses the following pinout with a Teensy++, as pictured:
 #       here: http://i.imgur.com/Q8TZ3TR.jpg
 # Strobe pins, 13 pin strip (1 = leftmost pin as pictured above)
 # 1 : D0
