@@ -26,10 +26,13 @@ A USB Controller for the buckling spring keyboard on the IBM Wheelwriter typewri
 
 ### Configure Soarer's Controller
 
-Make sure to run all commands as root, with `sudo`.
+1. From the `tools/` folder, extract the binaries and put them in the `config/` folder.
+2. Then, go to the `config/` folder. Choose a config to use, and modify them if necessary.
+3. Finally, send a config over to the teensy. For example, we will use `ww2-teensy2plus.sc` .
+  * Make sure to run all commands as root, with `sudo`.
 
-    sudo ./scas wheelwriter-5-teensy2plus-sethstorm.sc wheelwriter-5-teensy2plus-sethstorm.scb
-    sudo ./scwr wheelwriter-5-teensy2plus-sethstorm.scb
+    sudo ./scas ww2-teensy2plus.sc output.scb
+    sudo ./scwr output.scb
 
 ## Credits and Sources
 
