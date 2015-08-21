@@ -39,3 +39,9 @@ A USB Controller for the buckling spring keyboard on the IBM Wheelwriter typewri
 * [Deskthority - Soarer's Keyboard Controller](http://deskthority.net/workshop-f7/soarer-s-keyboard-controller-firmware-t6767.html)
 * [Deskthority - PhosphorGlow: Model M Matrix + Teensy](http://deskthority.net/workshop-f7/model-m-matrix-teensy-t8149.html)
 * [Deskthority - Sethstorm: Wheelwriter 5 to Teensy++](http://deskthority.net/workshop-f7/wheelwriter-5-iso-enter-boltmodded-t7397.html)
+
+## License
+
+This project is specifically licensed under the GPLv3, with the exception of PJRC's RawHID, which is under the MIT License, and Soarer's Controller binaries, which are not source code.
+
+Note that the GPLv3 adds an additional clause to the GPLv2 to prevent ["Tivoization"](http://www.linfo.org/tivoization.html), so manufacturers using this code are not allowed to enforce restrictions that prevent updated versions of this code to be installed on their devices.
