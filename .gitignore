@@ -1,0 +1,6 @@
+# ignore temp files
+.directory
+*.kate-swp
+*~
+# ignore extracted binaries
+tools/Soarer_sctools_v1.20_beta4_linux

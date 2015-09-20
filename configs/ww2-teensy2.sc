@@ -1,26 +1,44 @@
 #
-# Wheelwriter Matrix (ISO Enter)
-# A sane, yet minimalist layout.
-# Source: Sethstorm from Geekhack.
+## Personal Wheelwriter 2/Wheelwriter 1000 Matrix (US English)
+## Modified for WW2/WW1000 by Antonizoon.
+# 
+# Inspired from Wheelwriter 5 layout by: Sethstorm from Geekhack.
 # http://geekhack.org/index.php?topic=55676.msg1372033#msg1372033
 #
-# Layout Notes:
-# Layout mostly follows AT(Ctrl between Tab/Left Shift, Caps Lock below Right Shift) aside from ISO Enter/F11/F12.
+## Layout Notes:
+# Layout follows a 60% reduction of a standard PS/2 layout, adding function keys.
+# Because the keyboard is labeled for use on a typewriter, some remapping is necessary.
 #
-# Top two keys in the 5-key vertical block are PgUp/PgDn respectively.
-# Bottom two keys in the 5-key vertical block are F11/F12 respectively.
+## Functionality Difference - Swap keycaps with Unicomp or Model M to reduce confusion
+# The 6 key has a Cent symbol on top, but it will output the standard ^ (Caret) symbol when shifted.
+# The key above the Tab key is a circle and +- sign, but it is the same as the (`/~) Grave Accent key.
 #
-# The middle key in the 5-key vertical block on the right can be used as follows:
-# [Modifier]-WASD : Cursor keys (Up/Left/Down/Right)
-# [Modifier]-[Number key] : Equivalent numpad key
+## Spacebar Row
+# Ctrl : [Code] - The awesome Code key is used as a standard Ctrl key.
+# Alt : [<X]/Word] - This key is originally used for whiting out words on the typewriter, but is now an Alt key.
+#
+## Left 5-key vertical block
+# Esc : [Mar Rel] - Top key in left 5-key vertical block.
+# Volume Up/Volume Down : [LMar]/[RMar] - Second and Third keys in left 5-key vertical block.
+# Windows Key : [TSet] - Fourth key in left 5-key vertical block.
+#
+## Right 5-key vertical block
+# PgUp/PgDn : [Paper Up]/[Paper Down] - Top two keys in the right 5-key vertical block, respectively.
+# Backslash : [Reloc] - Since the US layout is missing the backslash/pipe key, we put it on this key, just above the cursor keys.
+# 
+## The last key in the 5-key vertical block on the left, [T Clr] can be used a function modifier (Fn) key:
+# [Modifier]-[Number key] : F1 to F10 keys.
+# [Modifier]-[Minus/Underscore] : F11
+# [Modifier]-[Equal/Plus] : F12
 # [Modifier]-[Backspace] : Del (for those wishing to perform Ctrl-Alt-Del, use Ctrl-Alt-Modifier-Backspace)
 # [Modifier]-[PgDn] : Left Win/GUI key
-# [Modifier]-[`] : Escape key
+# [Modifier]-WASD : Cursor keys (Up/Left/Down/Right)
 #
 
-# Note: This configuration uses the following pinout with a Teensy 2, as pictured:
-#       here: http://i.imgur.com/Q8TZ3TR.jpg
-# Strobe pins, 13 pin strip (1 = leftmost pin as pictured above)
+## Teensy 2 Wiring Diagram
+# A bit more awkward to work with than the Teensy 2++, since the auxilary D4 has to be used (D6 cannot be used, it's for LED control)
+# Solder a header pin or wire onto D4, or attach an Alligator clip if you're just testing.
+# Strobe pins, 14 pin strip (1 = leftmost pin as pictured above)
 # 1 : B0
 # 2 : B1
 # 3 : B2
@@ -34,6 +52,7 @@
 # 11: C7
 # 12: B4
 # 13: D7
+# 14: D4
 # 
 # Sense pins, 8 pin strip (1 = left most pin)
 # 1: F0
