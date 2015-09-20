@@ -31,6 +31,12 @@ Make sure to run all commands as root, with `sudo`.
     sudo ./scas wheelwriter-5-teensy2plus-sethstorm.sc wheelwriter-5-teensy2plus-sethstorm.scb
     sudo ./scwr wheelwriter-5-teensy2plus-sethstorm.scb
 
+### Testing
+
+Before you can assign keys, you must test out the keyboard first. Send an empty assignment to the Teensy first. Then, use hid_listen to see which keystrokes work.
+
+If you are experiencing dead keys or single keys that give multiple capcodes, check all connections and make sure it is soldered correctly. 99% of the time, the keyboard is fine, and something must be wrong with the connection.
+
 ## Credits and Sources
 
 * [Deskthority - Soarer's Keyboard Controller](http://deskthority.net/workshop-f7/soarer-s-keyboard-controller-firmware-t6767.html)
