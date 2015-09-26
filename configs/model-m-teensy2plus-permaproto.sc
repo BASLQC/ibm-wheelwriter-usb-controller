@@ -50,7 +50,25 @@
 # 7: C6
 # 8: C7
 #
-# LED pins x4
+# LED Pins - reversed.LEDs
+# For some reason, the LED Pin turns on when connected to ground. This is the
+# inverse of modern systems, which turn them on when connected to 5V.
+# Not to worry though. All you need to do is wire the fat wire to 5V, and the
+# chosen LED to GND. Then set Negative LED input, as shown below.
+#    Scroll Lock has never been tested, but should work...
+
+led num -PD7          # Pin 1 (leftmost)
+                      # Pin 2 needs to plug into 5V / VCC, no resistor necessary
+led caps -PE0         # Pin 3
+led scroll -PE1       # Pin 4 (rightmost)
+
+# On the Perma-Proto, it is either a separate 4 pin Trio-Mate, or the second 16-pin trio-mate (which I used in first prototype, but not needed)
+# For the purposes of the prototype, the last 16 
+
+#13: 1 - C1
+#14: 2 - 5V / VCC
+#15: 3 - C2
+#16: 4 - C3
 
 matrix
    scanrate 1	
