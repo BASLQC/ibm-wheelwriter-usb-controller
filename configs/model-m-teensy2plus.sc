@@ -20,23 +20,25 @@
 #
 
 ## Teensy 2++ Wiring Diagram
-# Strobe pins, 16 pin strip (1 = leftmost pin as pictured above)
-# D6 cannot be used since it is used to control the onboard LED, so E6 is used here instead
+# Note: This configuration uses the following pinout with a Teensy++, as pictured:
+#       here: http://i.imgur.com/Q8TZ3TR.jpg
+# Strobe pins, 13 pin strip (1 = leftmost pin as pictured above)
 # 1 : D0
 # 2 : D1
 # 3 : D2
 # 4 : D3
 # 5 : D4
 # 6 : D5
-# 7 : E6
-# 8 : D7
-# 9 : E0
-# 10: E1
-# 11: C0
-# 12: C1
-# 13: C2
-# 14: C3
-# 14: C4
+# 7 : E0
+# 8 : E1
+# 9 : C0
+# 10: C1
+# 11: C2
+# 12: C3
+# 13: C4
+# 14: C5
+# 15: C6
+# 16: C7
 # 
 # Sense pins, 8 pin strip (1 = left most pin)
 # 1: F0
@@ -47,6 +49,16 @@
 # 6: F5
 # 7: F6
 # 8: F7
+#
+# LED Pins. 4 pin strip (1 = left most pin)
+# 1: B1
+# 2: B0 - 5v
+# 3: E7
+# 4: E6
+
+led caps +PB1
+led num +PE7
+led scroll +PE6
 
 matrix
    scanrate 1	
@@ -62,18 +74,18 @@ matrix
    
    strobe   PD4   	F4			F3			F2			3			E			D			C			UNASSIGNED
    strobe   PD5   	G			T			5			4			R			F			V			B
-   strobe   PE6   	F5			BACKSPACE	F9			F10			UNASSIGNED	BACKSLASH	ENTER		SPACE
-   strobe   PD7   	H			Y			6			7			U			J			M			N
+   strobe   PE0   	F5			BACKSPACE	F9			F10			UNASSIGNED	BACKSLASH	ENTER		SPACE
+   strobe   PD1   	H			Y			6			7			U			J			M			N
    
-   strobe   PE0   	F6			RIGHT_BRACE	EQUAL		8			I			K			COMMA		UNASSIGNED
-   strobe   PE1   	UNASSIGNED	F7			F8			9			O			L			PERIOD		UNASSIGNED
-   strobe   PC0   	QUOTE		LEFT_BRACE	MINUS		0			P			SEMICOLON	UNASSIGNED	SLASH
-   strobe   PC1   	UNASSIGNED	PAD_4		DELETE		F11			PAD_7		PAD_1		NUM_LOCK	DOWN
+   strobe   PC0   	F6			RIGHT_BRACE	EQUAL		8			I			K			COMMA		UNASSIGNED
+   strobe   PC1   	UNASSIGNED	F7			F8			9			O			L			PERIOD		UNASSIGNED
+   strobe   PC2   	QUOTE		LEFT_BRACE	MINUS		0			P			SEMICOLON	UNASSIGNED	SLASH
+   strobe   PC3   	UNASSIGNED	PAD_4		DELETE		F11			PAD_7		PAD_1		NUM_LOCK	DOWN
    
-   strobe   PC2   	PAD_0		PAD_5		INSERT		F12			PAD_8		PAD_2		PAD_SLASH	RIGHT
-   strobe   PC3   	PAD_PERIOD	PAD_6		PAGE_UP		PAGE_DOWN	PAD_9		PAD_3		PAD_ASTERIX	PAD_MINUS
-   strobe   PC4   	UP			UNASSIGNED	HOME		END 		PAD_PLUS	PAD_ENTER	FN2			LEFT
-   strobe   PC5   	UNASSIGNED	UNASSIGNED	UNASSIGNED	PRINTSCREEN	SCROLL_LOCK	UNASSIGNED	UNASSIGNED	UNASSIGNED
+   strobe   PC4   	PAD_0		PAD_5		INSERT		F12			PAD_8		PAD_2		PAD_SLASH	RIGHT
+   strobe   PC5   	PAD_PERIOD	PAD_6		PAGE_UP		PAGE_DOWN	PAD_9		PAD_3		PAD_ASTERIX	PAD_MINUS
+   strobe   PC6   	UP			UNASSIGNED	HOME		END 		PAD_PLUS	PAD_ENTER	FN2			LEFT
+   strobe   PC7   	UNASSIGNED	UNASSIGNED	UNASSIGNED	PRINTSCREEN	SCROLL_LOCK	UNASSIGNED	UNASSIGNED	UNASSIGNED
    
 end
 
