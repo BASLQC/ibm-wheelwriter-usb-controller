@@ -52,6 +52,10 @@
 #
 # LED pins x4
 
+led num -PD7
+led caps -PE0
+led scroll -PE1
+
 matrix
    scanrate 1	
    debounce 5
