@@ -53,7 +53,7 @@
 # 12: C1
 # 13: C2
 # 14: C3
-# 14: C4
+# 15: C4
 # 
 # Sense pins, 8 pin strip (1 = left most pin)
 # We don't need to attach the 7-non reporting pins (from the right) to the Teensy
@@ -84,7 +84,7 @@ matrix
    strobe   PD7      G            F            5            4            R            T            V             B
    
    strobe   PE0      H            J            6            7            U            Y            M             N
-   strobe   PE1      UNASSIGNED   K            EQUAL_SIGN   8            I            RIGHT_BRACE  COMMA         I
+   strobe   PE1      UNASSIGNED   K            EQUAL        8            I            RIGHT_BRACE  COMMA         I
    strobe   PC0      UNASSIGNED   L            3            9            O            5            PERIOD        6
    strobe   PC1      QUOTE        SEMICOLON    MINUS        0            P            LEFT_BRACE   UNASSIGNED    SLASH
    
@@ -129,5 +129,5 @@ remapblock
    9 F9
    0 F10
    MINUS F11
-   EQUAL_SIGN F12
+   EQUAL F12
 endblock
