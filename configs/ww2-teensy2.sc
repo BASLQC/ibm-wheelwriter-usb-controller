@@ -35,10 +35,11 @@
 # [Modifier]-WASD : Cursor keys (Up/Left/Down/Right)
 #
 
-## Teensy 2 Wiring Diagram
-# A bit more awkward to work with than the Teensy 2++, since the auxilary D4 has to be used (D6 cannot be used, it's for LED control)
-# Solder a header pin or wire onto D4, or attach an Alligator clip if you're just testing.
-# Strobe pins, 14 pin strip (1 = leftmost pin as pictured above)
+## Teensy 2 Wiring Diagram - http://i.imgur.com/7a0YWON.jpg
+# It would probably be simpler to use the Teensy 2++. but the Teensy 2 and LC are cheaper and smaller.
+# This wiring is a bit complex, and requires you to use the auxilary pins, so check out the image linked above.
+# Strobe pins, 15 pin strip (1 = leftmost pin as pictured above)
+# D6 cannot be used since it is used to control the onboard LED
 # 1 : B0
 # 2 : B1
 # 3 : B2
@@ -52,7 +53,8 @@
 # 11: C7
 # 12: B4
 # 13: D7
-# 14: D4
+# 14: E6
+# 15: D4
 # 
 # Sense pins, 8 pin strip (1 = left most pin)
 # 1: F0
@@ -65,18 +67,17 @@
 # 8: B5
 
 
-# empty matrix for testing with hid
 matrix
    scanrate 1
    debounce 5
    blocking 0
 
-   sense             PF0          PF1          PF4          PF5          PF6          PF7          PB6           PB5
+   sense             PF0          PF1          PF4          PF5          PF6          PF7          PB6           PB5         
 
-   strobe   PB0      UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED    LALT
-   strobe   PB1      F10          F7           F1           F3           F4           F5           F11           SPACE
-   strobe   PB2      F9           F8           F2           UNASSIGNED   TAB          F6           LCTRL         CAPS_LOCK
-   strobe   PB3      UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED    LSHIFT
+   strobe   PB0      UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED    UNASSIGNED
+   strobe   PB1      FN2          UNASSIGNED   UNASSIGNED   UNASSIGNED   MEDIA_VOLUME_UP   UNASSIGNED   UNASSIGNED    SPACE
+   strobe   PB2      UNASSIGNED   LGUI         ESC          UNASSIGNED   TAB          MEDIA_VOLUME_DOWN   CAPS_LOCK     LALT
+   strobe   PB3      UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   RSHIFT        LSHIFT
    
    strobe   PB7      UNASSIGNED   A            BACK_QUOTE   1            Q            UNASSIGNED   Z             8
    strobe   PD0      UNASSIGNED   S            UNASSIGNED   2            W            UNASSIGNED   X             I
@@ -84,11 +85,13 @@ matrix
    strobe   PD2      G            F            5            4            R            T            V             B
    
    strobe   PD3      H            J            6            7            U            Y            M             N
-   strobe   PC6      UNASSIGNED   K            EQUAL_SIGN   8            I            RIGHT_BRACE  COMMA         I
+   strobe   PC6      UNASSIGNED   K            EQUAL        8            I            RIGHT_BRACE  COMMA         I
    strobe   PC7      UNASSIGNED   L            3            9            O            5            PERIOD        6
-   strobe   PB4      QUOTE        SEMICOLON    MINUS        0            P            LEFT_BRACE   BACKSLASH     SLASH
+   strobe   PB4      QUOTE        SEMICOLON    MINUS        0            P            LEFT_BRACE   UNASSIGNED    SLASH
    
-   strobe   PD7      UNASSIGNED   FN2          BACKSPACE    PAGE_UP      PAGE_DOWN    6            ENTER         F12
+   strobe   PD7      ENTER        UNASSIGNED   BACKSPACE    UNASSIGNED   UNASSIGNED   6            UP            LEFT
+   strobe   PE6      DOWN         BACKSLASH    PAGE_UP      UNASSIGNED   PAGE_DOWN    UNASSIGNED   UNASSIGNED    RIGHT
+   strobe   PD4      UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED   UNASSIGNED    LCTRL
 
 end
 
@@ -96,27 +99,36 @@ macroblock
 
 endblock
 
+# [T Clr] at the bottom of the left 5-key vertical block is used as Function key
 layerblock
    FN2 2
 endblock
 
+# Function Modifier Layer
 remapblock
    layer 2
    W UP
    A LEFT
    S DOWN
    D RIGHT
+   
    BACKSPACE DELETE
-   BACK_QUOTE ESC
-   PAGE_DOWN LGUI
-   1   PAD_1
-   2   PAD_2
-   3   PAD_3
-   4   PAD_4
-   5   PAD_5
-   6   PAD_6
-   7   PAD_7
-   8   PAD_8
-   9   PAD_9
-   0   PAD_0
+   PAGE_UP HOME
+   PAGE_DOWN END
+   P PRINTSCREEN
+   I INSERT
+   S SCROLL_LOCK
+   
+   1 F1
+   2 F2
+   3 F3
+   4 F4
+   5 F5
+   6 F6
+   7 F7
+   8 F8
+   9 F9
+   0 F10
+   MINUS F11
+   EQUAL F12
 endblock

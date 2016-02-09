@@ -48,6 +48,16 @@
 # 6: F5
 # 7: F6
 # 8: F7
+#
+# LED Pins. 4 pin strip (1 = left most pin)
+# 1: B1
+# 2: B0 - 5v
+# 3: E7
+# 4: E6
+
+led caps +PB1
+led num +PE7
+led scroll +PE6
 
 # LED Pins - reversed.LEDs
 # For some reason, the LED Pin turns on when connected to ground. This is the

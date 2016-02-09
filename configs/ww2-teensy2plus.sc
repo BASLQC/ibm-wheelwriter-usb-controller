@@ -45,15 +45,15 @@
 # 4 : D3
 # 5 : D4
 # 6 : D5
-# 7 : E0
-# 8 : E1
-# 9 : C0
-# 10: C1
-# 11: C2
-# 12: C3
-# 13: C4
-# 14: C5
-# 15: C6
+# 7 : D6
+# 8 : D7
+# 9 : E0
+# 10: E1
+# 11: C0
+# 12: C1
+# 13: C2
+# 14: C3
+# 15: C4 
 # 
 # Sense pins, 8 pin strip (1 = left most pin)
 # We don't need to attach the 7 loopback pins (from the right) to the Teensy
@@ -83,10 +83,10 @@ matrix
    strobe   PE0      UNASSIGNED   D            UNASSIGNED   3            E            UNASSIGNED   C             K
    strobe   PE1      G            F            5            4            R            T            V             B
    
-   strobe   PC0      H            J            6            7            U            Y            M             N
-   strobe   PC1      UNASSIGNED   K            EQUAL_SIGN   8            I            RIGHT_BRACE  COMMA         I
-   strobe   PC2      UNASSIGNED   L            3            9            O            5            PERIOD        6
-   strobe   PC3      QUOTE        SEMICOLON    MINUS        0            P            LEFT_BRACE   UNASSIGNED    SLASH
+   strobe   PE0      H            J            6            7            U            Y            M             N
+   strobe   PE1      UNASSIGNED   K            EQUAL        8            I            RIGHT_BRACE  COMMA         I
+   strobe   PC0      UNASSIGNED   L            3            9            O            5            PERIOD        6
+   strobe   PC1      QUOTE        SEMICOLON    MINUS        0            P            LEFT_BRACE   UNASSIGNED    SLASH
    
    strobe   PC4      ENTER        UNASSIGNED   BACKSPACE    UNASSIGNED   UNASSIGNED   6            UP            LEFT
    strobe   PC5      DOWN         BACKSLASH    PAGE_UP      UNASSIGNED   PAGE_DOWN    UNASSIGNED   UNASSIGNED    RIGHT
@@ -129,5 +129,5 @@ remapblock
    9 F9
    0 F10
    MINUS F11
-   EQUAL_SIGN F12
+   EQUAL F12
 endblock
