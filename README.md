@@ -48,6 +48,4 @@ If you are experiencing dead keys or single keys that give multiple capcodes, ch
 
 ## License
 
-This project is specifically licensed under the GPLv3, with the exception of PJRC's RawHID, which is under the MIT License, and Soarer's Controller binaries, which are not source code.
-
-Note that the GPLv3 adds an additional clause to the GPLv2 to prevent ["Tivoization"](http://www.linfo.org/tivoization.html), so manufacturers using this code are not allowed to enforce restrictions that prevent updated versions of this code to be installed on their devices.
+This project was relicensed under the MIT License, with the exception of PJRC's RawHID, which is under the MIT License, and Soarer's Controller binaries, which are not source code. It would have been a farce to distribute under the GPLv3 license when we have no source code for Soarer's Controller.
